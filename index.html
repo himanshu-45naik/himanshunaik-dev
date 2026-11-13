@@ -1,71 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BATMAN</title>
+    <title>Himanshu Naik · Backend & AI Engineer</title>
+    <meta name="description" content="Himanshu Naik, backend and AI engineer in Pune. AI agents, RAG systems and the backend services they run on.">
 
-    <link rel="icon" type="image/png" href="assets/logo/bat.png">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Preview card when the link is shared (WhatsApp, LinkedIn, X...) -->
+    <meta property="og:title" content="Himanshu Naik · Backend & AI Engineer">
+    <meta property="og:description" content="AI agents, RAG systems and the backend services they run on.">
+    <meta property="og:image" content="https://www.himanshunaik.dev/assets/images/pfp.jpg">
+
+    <link rel="icon" type="image/png" href="/assets/logo/bat-160.png">
+
+    <!-- Monospace font for small labels (dates, shortcut keys) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Apply the saved theme BEFORE the page paints, so light-mode visitors
+         don't see a dark flash while React is still loading. -->
+    <script>
+        if (localStorage.getItem("theme") === "light") {
+            document.documentElement.dataset.theme = "light";
+        }
+    </script>
 </head>
 
 <body>
+    <!-- React puts the whole site inside this div (see src/main.jsx) -->
+    <div id="root"></div>
 
-    <main class="container">
-
-        <!-- Profile -->
-        <img
-            class="profile-picture"
-            src="assets/images/pfp.png"
-            alt="Profile picture"
-        >
-
-        <div class="intro">
-
-            <div class="name">
-                <h1>Himanshu Naik</h1>
-            </div>
-
-            <p class="role">Software Engineer</p>
-
-        </div>
-
-        <p class="bio">
-            I am a full-time software engineer.<br>
-            Part time I try to learn anything that can help me
-            to leave my full-time job ;)
-        </p>
-
-
-        <!-- Work -->
-        <section class="work">
-
-            <h2>WORK</h2>
-
-            <a href="https://www.upswing.cloud/" class="work-item" target="_blank" rel="noopener noreferrer">
-
-                <img
-                    src="assets/images/upswing.png"
-                    alt="Upswing"
-                >
-
-                <div class="work-info">
-                    <h3>Upswing - Cognitive Hospitality Solutions</h3>
-                    <p>Hotel Booking Agent</p>
-                </div>
-
-                <span class="arrow">↗</span>
-
-            </a>
-
-        </section>
-
-    </main>
-
-    <script src="js/script.js"></script>
-
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>

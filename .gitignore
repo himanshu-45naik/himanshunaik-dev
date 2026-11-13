@@ -1,0 +1,8 @@
+# installed packages (re-created by `npm install`)
+node_modules
+
+# build output (re-created by `npm run build`)
+dist
+
+# macOS junk
+.DS_Store
