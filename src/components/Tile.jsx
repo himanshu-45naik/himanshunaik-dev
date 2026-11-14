@@ -5,9 +5,13 @@
 //   shortcut → letter in the corner; pressing it on the keyboard jumps here
 //   href     → optional. If given, the whole card becomes a link
 //   wide     → optional. If true, the card spans both columns
+//   media    → optional. If true, the card is a full-bleed image and the label
+//              sits on top of it as a small chip
 //   children → whatever you put between <Tile> and </Tile>
-export default function Tile({ label, shortcut, href, wide = false, children }) {
-  const className = wide ? "tile tile-wide" : "tile";
+export default function Tile({ label, shortcut, href, wide = false, media = false, children }) {
+  let className = "tile";
+  if (wide) className += " tile-wide";
+  if (media) className += " tile-media";
 
   const inside = (
     <>

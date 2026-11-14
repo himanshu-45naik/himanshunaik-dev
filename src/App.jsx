@@ -3,7 +3,7 @@ import Header from "./components/Header.jsx";
 import Intro from "./components/Intro.jsx";
 import Tile from "./components/Tile.jsx";
 import Footer from "./components/Footer.jsx";
-import { profile, work, now, projects, stack, education, contact } from "./data.js";
+import { profile, work, now, featured, projects, stack, education, contact } from "./data.js";
 
 export default function App() {
   // Keyboard shortcuts: press the letter in a card's corner to jump to it.
@@ -87,6 +87,18 @@ export default function App() {
             ))}
           </ol>
           <p className="mono">{now.tech}</p>
+        </Tile>
+
+        {/* FEATURED: a big screenshot, the whole card links to the project */}
+        <Tile label={`${featured.name} · ${featured.tagline}`} shortcut="M" href={featured.url} wide media>
+          <img
+            className="media-image"
+            src={featured.image}
+            alt={featured.alt}
+            width="1200"
+            height="530"
+            loading="lazy"
+          />
         </Tile>
 
         {/* PROJECTS: a list, so the card itself is not a link */}

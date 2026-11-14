@@ -49,6 +49,15 @@ export const now = {
   tech: "Python · PyMuPDF · Pydantic · Groq",
 };
 
+// Big image card, like a product shot. Real Parchi windows, captured on my Mac.
+export const featured = {
+  name: "Parchi",
+  tagline: "notes that live on your Mac desktop",
+  image: "/assets/images/parchi.jpg",
+  alt: "Parchi on a Mac desktop: to-do lists, notes, a taped photo and a receipt-style ticket, each in a different paper theme",
+  url: "https://github.com/himanshu-45naik/parchi",
+};
+
 // Shown in this order. extra = an optional second link (live demo, download...)
 export const projects = [
   {
