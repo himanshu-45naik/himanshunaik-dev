@@ -14,7 +14,9 @@ npm run build    # final site in dist/
 
 - `src/data.js`: all the text (projects, work, stack, links)
 - `src/App.jsx`: page layout and keyboard shortcuts
-- `src/components/`: Header, ThemeToggle, Intro, Tile, Footer
+- `src/components/`: Header, ThemeToggle, Intro, Tile, Activity, Footer
+- `api/`: Vercel serverless functions that fetch GitHub and LeetCode activity
+  for the heatmaps (`npm run dev` runs them too, see `vite.config.js`)
 - `src/index.css`: all the styles (dark/light theme variables at the top)
 - `public/assets/`: images
 - `old-site/`: the first plain HTML/CSS version, kept for comparison

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Header from "./components/Header.jsx";
 import Intro from "./components/Intro.jsx";
 import Tile from "./components/Tile.jsx";
+import Activity from "./components/Activity.jsx";
 import Footer from "./components/Footer.jsx";
 import { profile, work, now, featured, projects, stack, education, contact } from "./data.js";
 
@@ -126,6 +127,11 @@ export default function App() {
               </li>
             ))}
           </ul>
+        </Tile>
+
+        {/* ACTIVITY: GitHub + LeetCode heatmaps, fetched live from /api */}
+        <Tile label="Activity" shortcut="A" wide>
+          <Activity />
         </Tile>
 
         {/* STACK: one row per group, one chip per skill (a list inside a list) */}

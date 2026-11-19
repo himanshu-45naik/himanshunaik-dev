@@ -119,6 +119,13 @@ export const contact = {
   text: "I'm open to internships and entry-level roles, and I take on small freelance projects.",
 };
 
+// Activity heatmaps. The functions in api/ read these usernames too,
+// so changing one here changes where the data comes from.
+export const activity = {
+  github: { username: "himanshu-45naik", url: "https://github.com/himanshu-45naik" },
+  leetcode: { username: "hmnsh_nk", url: "https://leetcode.com/u/hmnsh_nk/" },
+};
+
 // Leave a url empty ("") to hide that link.
 export const links = [
   { label: "GitHub", url: "https://github.com/himanshu-45naik" },
